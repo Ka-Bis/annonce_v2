@@ -1,0 +1,81 @@
+<div class="modal fade" id="connect" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content mdl-custom">
+
+                    {{!-- FORMULAIRE DE CONNEXION --}}
+            <div class="modal-body">
+                <form  id="connect-data" action="/login/auth" method="POST">
+            <h5 class="modal-title text-align mb-4" id="exampleModalLabel">Connexion</h5>
+                <div class="form-group">
+                    <input name="email" type="email" class="form-control" placeholder="E-mail">
+                </div>
+                
+                <div class="input-group">
+                    <input name="password" type="password" class="form-control" placeholder="Mot de passe">
+                    <button type="submit" style="border-radius: 0" class="btn btn-outline-primary">Se connecter</button>
+                </div>
+                <small class="text-muted">
+                    <a class="text-muted" href="#">Mot de passe oublié</a>
+
+                </small>
+                <br>
+                <hr>
+                <h5 style="text-align: center">Vous n’avez pas de compte ?</h5>
+                <h5 class="text-align">
+                    <button id="fh-data" type="button" style="border-radius:0" class="btn btn-success" onclick="hideconnect()">Creer un compte </button>
+                </h5> 
+                </form>
+
+                {{!-- Formulaire de d('inscription--}}
+
+
+                <form  id="register-data" action="/register/auth" method="POST">
+            <h5 class="modal-title text-align mb-4" id="exampleModalLabel">Inscription</h5>
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" required placeholder="Nom">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="first_name" class="form-control" required placeholder="Prénom">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" required placeholder="E-mail">
+                </div>
+                <div class="input-group">
+                     <input name="password" type="password" class="form-control" required placeholder="Mot de passe">
+                </div>
+
+                <div class="input-group mt-3">
+                    <input name="password2" type="password" class="form-control" placeholder="Confirmer le mot de passe">
+                    <button type="submit" style="border-radius: 0" required class="btn btn-outline-primary">Inscription</button>
+                </div>
+                <br>
+                <hr>
+                <h5 style="text-align: center">J'ai déjà un compte ?</h5>
+                <h5 class="text-align">
+                    <button  type="button" style="border-radius:0" class="btn btn-success" onclick="hideregister()">Me connecter </button>
+                </h5> 
+                </form>
+                <style>
+                    #register-data{
+                        display: none;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function hideconnect() {
+    document.getElementById("connect-data").style.display = "none"
+    document.getElementById('register-data').style.display = "block"
+  }
+</script>
+
+<script>
+    function hideregister() {
+    document.getElementById("connect-data").style.display = "block"
+    document.getElementById('register-data').style.display = "none"
+  }
+</script>

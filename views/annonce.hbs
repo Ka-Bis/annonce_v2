@@ -1,0 +1,52 @@
+
+    <link rel="stylesheet" href="/ressources/css/Users.css">
+    {{> navbar}}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-12">
+
+                <div class="card mb-3">
+                    <img src="./ressources/img/img_2.jpg" class="card-img-top ad-pic img-fluid" alt="profil">
+                    <div class="card-body">
+                        <span class="view-price">
+                            {{annonce.ads_price}}€
+                        </span>
+                        <h4 class="card-title">{{annonce.ads_title}}</h4>
+                        <br>
+                        <em>Vente</em>
+                        <br>
+                        <em>Aujourd'hui à 01h01</em>
+                        <address>{{annonce.ads_category}}</address>
+                        <p class="card-text">
+                         {{annonce.ads_description}}
+                        </p>
+                        {{!-- <p class="card-text"><small class="text-muted">{{formatRelative annonce.date}} </small></p> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="view-ad">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./ressources/icons/round-account-button-with-user-inside.svg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{first_name}} {{annonce.name}}</h5>
+
+                            <a href="#dd" id="data-hide" class="btn btn-primary" onclick="Datashow()">Voir les
+                                coordonné</a>
+
+                            <ul style="display:none" id="data-show">
+                                <li>076543256</li>
+                                <li>{{email}}</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="./ressources/js/data.js"></script>
+{{> footer}}

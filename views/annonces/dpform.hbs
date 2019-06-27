@@ -1,0 +1,90 @@
+  <link rel="stylesheet" href="/ressources/css/add-ad.css">
+{{> navbar}}
+<main>
+    <section>
+        <div class="container">
+            <div class="row">
+         
+                <div class="col-md-12">
+                    <div class="card mb-3 card-ad-users">
+                        <div class="card-body">
+                            <form action="/annonces/send" method="POST" enctype="application/x-www-form-urlencoded">
+                                <h5 class="card-title">Déposer une annonce</h5>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 mx-auto">
+                                            <div class="form-group">
+                                                <label>Catégorie </label>
+                                                <select name="ads_category" class="form-control">
+                                                    <option>La roche-sur yon</option>
+                                                    <option>Les sables d'olonne</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mx-auto">
+
+                                            <div class="form-group">
+                                                <label>Titre</label>
+                                                <input name="ads_title" type="text" class="form-control" id="ad-title"
+                                                    placeholder="Pc Assus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mx-auto">
+                                            <div class="form-group">
+                                                <label>Description</label>
+                                                <textarea name="ads_description"class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mx-auto">
+                                            <div class="form-group">
+                                                <label>Prix</label>
+                                                <div class="input-group">
+                                                    <input  name="ads_price" type="number" id="input-price" class="form-control custom-number"
+                                                        placeholder="100">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text">€</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 offset-md-3">
+                                            <div class="form-group">
+                                                <label class="upload">
+                                                    <i class="fa fa-image"></i> <img
+                                                        src="/ressources/icons/upload.svg"><input type="file"
+                                                        style="display: none;" name="ads_pic">
+                                                </label>
+                                            </div>
+                                            {{!-- <button class="btn btn-success" type="submit" id="send-ad">Déposer
+                                                l'annonce</button> --}}
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                        <div class="col-md-6 offset-md-3">
+                                            <div class="form-group">
+                                                <input name="ads_city" type="text" class="form-control" id="ad-city"
+                                                    placeholder="Ville">
+                                            </div>
+                                            <button class="btn btn-success" type="submit" id="send-ad">Déposer
+                                                l'annonce</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
